@@ -8,7 +8,10 @@ while True:
     try:
         payRate = float(input("Enter Hourly Rate Of Pay: "))
     except ValueError:
-        print("Sorry, I didn't understand that. Value must be number.")
+        print("Sorry, I didn't understand that. Please enter a positive number.")
+        continue
+    if payRate < 0:
+        print("Negative numbers are not permitted. Please enter a postive number ")
         continue
     else:
         break
@@ -18,10 +21,13 @@ while True:
     try:
         hours = float(input("Enter Hours Worked: "))
     except ValueError:
-        print("Sorry, I didn't understand that. Value must be a number.")
+        print("Sorry, I didn't understand that. Please enter a positive number.")
         continue
     if hours > 168:
         print("You can't work more than 168 hours in a week.")
+        continue
+    if hours < 0:
+        print("Negative numbers are not permitted. Please enter a postive number ")
         continue
     else:
         break
