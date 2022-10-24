@@ -47,7 +47,7 @@ reghours = hours - otHours
 
 #Compute regular pay
 def regpay(reghours, payRate):
-    return float((reghours) * payRate)
+    return float(reghours * payRate)
 
 #Compute overtime pay
 def otpay(otHours, otpayRate):
