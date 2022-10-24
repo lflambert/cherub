@@ -47,7 +47,7 @@ reghours = hours - otHours
 
 #Compute regular pay
 def regpay(reghours, payRate):
-    return float((hours-otHours) * payRate)
+    return float((reghours) * payRate)
 
 #Compute overtime pay
 def otpay(otHours, otpayRate):
@@ -61,6 +61,7 @@ ficataxedAmount = round((totalpay  * fica), 2)
 taxedAmount = round((federaltaxedAmount + statetaxedAmount + ficataxedAmount), 2)
 afterTaxPay = round((totalpay - taxedAmount),2)
 
+#Print Payroll Information
 print("\n Your Name:", name)
 print(" Hourly rate:", payRate)
 print(" Hours worked:", hours)
